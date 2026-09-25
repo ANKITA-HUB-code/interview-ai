@@ -1,0 +1,9 @@
+{
+  "name": "interview-ai",
+  "version": "1.0.0",
+  "description": "AI-Based Interview Preparation and Evaluation System using Generative AI and Prompt Engineering",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}

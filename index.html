@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterviewAI | AI Interview Preparation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Interview<span>AI</span></div>
+    <p>AI-Powered Interview Preparation & Evaluation</p>
+</header>
+
+<main>
+
+    <section id="setupSection" class="card">
+        <h1>Prepare Smarter. Interview Better.</h1>
+
+        <p class="subtitle">
+            Practice realistic interview questions and receive instant
+            AI-powered feedback on your answers.
+        </p>
+
+        <div class="form-grid">
+
+            <div>
+                <label>Target Role</label>
+                <select id="role">
+                    <option value="Full Stack Developer">Full Stack Developer</option>
+                    <option value="Software Developer">Software Developer</option>
+                    <option value="Frontend Developer">Frontend Developer</option>
+                    <option value="Backend Developer">Backend Developer</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                    <option value="General Software Engineering">General Software Engineering</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Difficulty</label>
+                <select id="difficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button onclick="startInterview()" class="primary-btn">
+            Start AI Interview
+        </button>
+
+        <p id="setupStatus" class="status"></p>
+    </section>
+
+
+    <section id="interviewSection" class="card hidden">
+
+        <div class="top-row">
+            <span id="questionNumber">Question 1</span>
+            <span id="roleDisplay"></span>
+        </div>
+
+        <div class="question-box">
+            <p class="label">INTERVIEW QUESTION</p>
+            <h2 id="questionText">Loading...</h2>
+        </div>
+
+        <label>Your Answer</label>
+
+        <textarea
+            id="answer"
+            placeholder="Type your interview answer here..."
+            rows="9"></textarea>
+
+        <div class="button-row">
+            <button onclick="evaluateAnswer()" class="primary-btn">
+                Evaluate My Answer
+            </button>
+
+            <button onclick="skipQuestion()" class="secondary-btn">
+                Skip
+            </button>
+        </div>
+
+        <p id="answerStatus" class="status"></p>
+
+        <div id="feedbackBox" class="feedback hidden">
+
+            <h2>AI Evaluation</h2>
+
+            <div class="score-circle">
+                <span id="score">0</span>
+                <small>/10</small>
+            </div>
+
+            <div class="feedback-section">
+                <h3>Overall Feedback</h3>
+                <p id="overallFeedback"></p>
+            </div>
+
+            <div class="feedback-section">
+                <h3>Strengths</h3>
+                <ul id="strengths"></ul>
+            </div>
+
+            <div class="feedback-section">
+                <h3>Areas to Improve</h3>
+                <ul id="improvements"></ul>
+            </div>
+
+            <div class="feedback-section">
+                <h3>Suggested Answer</h3>
+                <p id="suggestedAnswer"></p>
+            </div>
+
+            <button onclick="nextQuestion()" class="primary-btn">
+                Next Question →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section id="summarySection" class="card hidden">
+
+        <h1>Interview Complete 🎉</h1>
+
+        <p class="subtitle">
+            Here's your AI-generated interview performance summary.
+        </p>
+
+        <div class="summary-score">
+            <span id="finalScore">0</span>/10
+        </div>
+
+        <p id="summaryText"></p>
+
+        <button onclick="location.reload()" class="primary-btn">
+            Start New Interview
+        </button>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>InterviewAI — Generative AI Capstone Project 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
