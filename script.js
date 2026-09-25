@@ -216,8 +216,6 @@ function skipQuestion() {
         return;
     }
 
-    questionCount++;
-
     nextQuestion();
 }
 
